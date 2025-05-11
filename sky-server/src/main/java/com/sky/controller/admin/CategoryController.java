@@ -68,6 +68,6 @@ public class CategoryController {
     public Result<List<Category>> list(Integer type) {
         log.info("查询分类：{}", type);
         List<Category> list = categoryService.list(type);
-        return Result.success();
+        return Result.success(list);
     }
 }
